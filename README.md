@@ -1,2 +1,2 @@
 # gallery-generator
-Simple gallery generator
+Simple gallery generator 

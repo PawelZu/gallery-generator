@@ -76,7 +76,7 @@ const galleryPZ = {
         this.parseTemplate(codeLoadedByUser);
         this.reloadPreview(true);
     },
-    updateDate(date) {console.log(date);
+    updateDate(date) {
         if(!date) {
             alert('Brak daty!');
             return;
@@ -131,11 +131,6 @@ const galleryPZ = {
             el.setAttribute('src', el.getAttribute('data-src'));
         });
 
-        preViewPanel.querySelectorAll('.genjs_link').forEach(el => {
-            el.setAttribute('href', `https://wittchen.com${el.getAttribute('href')}`);
-            el.setAttribute('target', `_blank`);
-        });
-
         codeDate.value = this.galleryPZData.galleryPZDate;
 
         if(fromInit) this.panelFormUpdate();
@@ -149,9 +144,7 @@ const galleryPZ = {
         }
 
         if(fieldName === 'link') {
-            value = value.replace(/.*:\/\/(www.)?wittchen([^\/]+)/i, '');
-            
-            value = `/${value.replace(/^\/+/g, '')}`;console.log(value);
+            value = `/${value.replace(/^\/+/g, '')}`;
         }
 
         this.galleryPZData.items[boxId][fieldName] = value;
