@@ -1,0 +1,18 @@
+{
+    "liveServer.settings.port": 5502,
+    "beautify.options": {
+    
+    },
+    "liveSassCompile.settings.formats": [
+        {
+            "format": "expanded",
+            "extensionName": ".css",
+            "savePath": "./scss"
+        },
+        {
+            "extensionName": ".min.css",
+            "format": "compressed",
+            "savePath": "./scss"
+        }
+    ],
+}

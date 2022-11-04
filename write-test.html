@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        function WriteToFile(passForm) {
+            const fso = CreateObject("Scripting.FileSystemObject");
+            const s   = fso.CreateTextFile("filename.txt", True);
+        
+            var firstName = document.getElementById('FirstName');
+            var lastName  = document.getElementById('lastName');
+        
+            s.writeline("First Name :" + FirstName);
+            s.writeline("Last Name :" + lastName);
+        
+            s.writeline("-----------------------------");
+            s.Close();
+         }
+    </script>
+    
+    // HTML
+    <form onSubmit="WriteToFile(this)">
+    <label>Type your first name:</label>
+    <input type="text" name="FirstName" id="firstName" size="20">
+     
+    <label>Type your last name: </abel>
+    <input type="text" name="LastName" id="lastName" size="20">
+     
+    <input type="submit" value="submit">
+    </form>
+</body>
+</html>
