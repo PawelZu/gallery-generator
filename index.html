@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>galleryPZ generator</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="gliderjs/glider.css"/>
+    <script src="gliderjs/glider.js"></script>
+    <script defer src="script.js"></script>
+</head>
+<body>
+    
+    <dialog id="code-load">
+        <button id="code-load-btn" class="btn btn-modal-action">Załaduj</button>
+        <button class="btn btn-close closeDialogJs">&times;</button>
+        <textarea class="code-load-box" placeholder="Wklej kod"></textarea>
+    </dialog>
+    
+    <section class="edit-panel">
+        <header>
+            <p class="code-load-btn">
+                <button id="show-code-load-btn" class="btn btn--mainPanel" data-text="Paste code from existing gallery">Load code</button>
+                &nbsp;
+                <span id="box-date">Date: <input type="date" name="box_date"></span>
+            </p>
+        </header>
+
+        <div class="boxes">
+            <div class="box" data-boxid="0" draggable="true">
+                <h3>BOX 1</h3>
+                <small class="box-info">Drag to change order</small>
+                <fieldset><label for="">Link</label><input type="url" name="link" draggable="true"></fieldset>
+                <fieldset><label for="">Image</label><input type="url" name="img" draggable="true"></fieldset>
+                <fieldset><label for="">Hover image</label><input type="url" name="img_hover" draggable="true"></fieldset>
+            </div>
+            <div class="box" data-boxid="1" draggable="true">
+                <h3>BOX 2</h3>
+                <small class="box-info">Drag to change order</small>
+                <fieldset><label for="">Link</label><input type="url" name="link" draggable="true"></fieldset>
+                <fieldset><label for="">Image</label><input type="url" name="img" draggable="true"></fieldset>
+                <fieldset><label for="">Hover image</label><input type="url" name="img_hover" draggable="true"></fieldset>
+            </div>
+            <div class="box" data-boxid="2" draggable="true">
+                <h3>BOX 3</h3>
+                <small class="box-info">Drag to change order</small>
+                <fieldset><label for="">Link</label><input type="url" name="link" draggable="true"></fieldset>
+                <fieldset><label for="">Image</label><input type="url" name="img" draggable="true"></fieldset>
+                <fieldset><label for="">Hover image</label><input type="url" name="img_hover" draggable="true"></fieldset>
+            </div>
+            <div class="box" data-boxid="3" draggable="true">
+                <h3>BOX 4</h3>
+                <small class="box-info">Drag to change order</small>
+                <fieldset><label for="">Link</label><input type="url" name="link" draggable="true"></fieldset>
+                <fieldset><label for="">Image</label><input type="url" name="img" draggable="true"></fieldset>
+                <fieldset><label for="">Hover image</label><input type="url" name="img_hover" draggable="true"></fieldset>
+            </div>
+        </div>
+
+        <!-- <a href="data:text/plain;charset=utf-8,TEXT_HERE" download="galleryPZ-code.txt" id="download"> Click to download </a> -->
+        <p class="code-preview-btn">
+            <button id="code-preview-btn" class="btn  btn--mainPanel btn--showCode"  data-text="Show generated code">Show code</button>
+        </p>
+    </section>
+
+    <div class="galleryPZ-naglowek">
+        <h1 class="galleryPZ-header">Gallery Title</h1>
+    </div>      
+
+    <sectiion class="view-panel"></sectiion>
+
+    <dialog id="code-preview">
+        <button id="code-preview-copy" class="btn btn-modal-action">Skopiuj do schowka</button>
+        <button class="btn btn-close closeDialogJs">&times;</button>
+        <textarea disabled class="code-preview-box"></textarea>
+    </dialog>
+
+</body>
+</html>
+<!-- Initialize Swiper -->
+<script>
+// setTimeout(() => {
+    
+// }, 1000)
+  </script>
